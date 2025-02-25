@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Track live sports scores",
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "src/popup.html"
     },
     "permissions": ["storage"]
   }
