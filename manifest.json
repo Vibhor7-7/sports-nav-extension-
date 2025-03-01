@@ -1,11 +1,13 @@
 {
-    "manifest_version": 3,
-    "name": "Sports Nav",
-    "version": "1.0",
-    "description": "Track live sports scores",
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "permissions": ["storage"]
+  "manifest_version": 3,
+  "name": "Sports Nav",
+  "version": "1.0",
+  "description": "Track live sports scores",
+  "action": {
+      "default_popup": "popup.html" 
+  },
+  "permissions": ["storage", "alarms"],
+  "background": {
+      "service_worker": "background.js"
   }
-  
+}

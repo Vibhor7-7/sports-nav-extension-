@@ -6,10 +6,10 @@ const BASE_URL = 'https://www.thesportsdb.com/api/v1/json/' + API_KEY;
 // Fetch live scores from TheSportsDB
 async function fetchLiveScores() {
     try {
-        let response = await fetch(`${BASE_URL}/livescore.php?s=Soccer`);
-        let data = await response.json();
+        const response = await fetch(`${BASE_URL}/livescore.php?s=Soccer`);
+        const data = await response.json();
         
-        if (data && data.events) {
+        if (data?.events) {
             console.log('Live Soccer Scores:', data.events);
             chrome.storage.local.set({ soccerScores: data.events });
         }
