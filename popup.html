@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { width: 300px; padding: 10px; font-family: Arial; }
-        .score-item { margin: 10px 0; padding: 8px; border-bottom: 1px solid #eee; }
-        .teams { font-weight: bold; }
-        .status { color: #666; font-size: 0.9em; }
+        body { 
+            width: 300px; 
+            padding: 15px; 
+            font-family: Arial, sans-serif; 
+            background-color: #f8f9fa;
+        }
+        .search-section { 
+            margin-bottom: 15px;
+            display: flex;
+            gap: 8px;
+        }
+        input { 
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button { 
+            padding: 8px 16px;
+            background: #4285f4; 
+            color: white; 
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .team-list { 
+            margin-top: 10px; 
+        }
+        .team-item, .match-item { 
+            padding: 12px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .match-item { cursor: default; }
+        .match-item h3 { 
+            margin: 0 0 8px 0;
+            color: #1a73e8;
+        }
+        .no-results { 
+            color: #666; 
+            padding: 12px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h2>Live Soccer Scores ⚽</h2>
-    <div id="scores-container">Loading scores...</div>
+    <div class="search-section">
+        <input type="text" id="teamInput" placeholder="Enter team name">
+        <button id="searchBtn">Search</button>
+    </div>
+    <div id="teamList" class="team-list"></div>
+    <div id="matchesContainer"></div>
     <script src="popup.js"></script>
 </body>
 </html>
