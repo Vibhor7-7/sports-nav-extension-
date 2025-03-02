@@ -1,17 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Sports Nav",
+  "name": "Basketball Live Score Tracker",
   "version": "1.0",
-  "description": "Track live sports scores for your favorite teams",
+  "description": "Track live basketball scores using SportsDB API",
   "action": {
-      "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
-  "permissions": [
-      "storage",
-      "alarms",
-      "https://www.thesportsdb.com/*"
-  ],
-  "background": {
-      "service_worker": "background.js"
-  }
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.thesportsdb.com/"
+  ]
 }
