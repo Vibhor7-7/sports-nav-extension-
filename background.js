@@ -13,7 +13,7 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
     const { selectedTeam } = await chrome.storage.local.get(['selectedTeam']);
     if (selectedTeam?.id) {
       try {
-        const response = await fetch(`${BASE_URL}/games?team=${selectedTeam.id}&season=2023`, {
+        const response = await fetch(`${BASE_URL}/games?team=${selectedTeam.id}&season=2024`, {
           headers: { 'x-apisports-key': API_KEY }
         });
         if (!response.ok) throw new Error('API request failed');
