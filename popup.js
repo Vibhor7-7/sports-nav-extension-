@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const teamTagsContainer = document.getElementById('team-tags');
     
     // SportsDB API key and base URL
-    const apiKey = '3'; // Replace with your actual API key if needed
+    const apiKey = '3'; // 
     const baseUrl = 'https://www.thesportsdb.com/api/v1/json/';
     
     // Team name to short code mapping
