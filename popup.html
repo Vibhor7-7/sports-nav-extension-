@@ -2,100 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Basketball Live Scores</title>
+  <title>Sports Nav</title>
   <style>
-    body {
-      width: 350px;
-      min-height: 300px;
-      max-height: 500px;
-      padding: 10px;
-      font-family: Arial, sans-serif;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    .header h1 {
-      font-size: 18px;
-      margin: 0;
-    }
-    .search-container {
-      margin-bottom: 15px;
-    }
-    #team-search {
-      width: 70%;
-      padding: 5px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    #search-btn {
-      padding: 5px 10px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .game-card {
-      border: 1px solid #eee;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .teams {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-    }
-    .score {
-      font-weight: bold;
-      font-size: 18px;
-      text-align: center;
-    }
-    .game-info {
-      color: #777;
-      font-size: 12px;
-      text-align: center;
-    }
-    .favorite-teams {
-      margin-top: 15px;
-    }
-    .team-tag {
-      display: inline-block;
-      background: #f0f0f0;
-      padding: 5px;
-      margin: 2px;
-      border-radius: 3px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .loading {
-      text-align: center;
-      color: #777;
-    }
+    .team-item, .match-item { padding: 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
+    .no-results { padding: 10px; color: #666; }
+    small { color: #999; }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Basketball Live Scores</h1>
-    <button id="refresh-btn">Refresh</button>
-  </div>
-  
-  <div class="search-container">
-    <input type="text" id="team-search" placeholder="Search for a team...">
-    <button id="search-btn">Track</button>
-  </div>
-  
-  <div id="live-games"></div>
-  
-  <div class="favorite-teams">
-    <h2>Tracked Teams</h2>
-    <div id="team-tags"></div>
-  </div>
-  
+  <input type="text" id="searchInput" placeholder="Search NBA teams...">
+  <div id="teamList"></div>
+  <div id="matchesContainer"></div>
   <script src="popup.js"></script>
 </body>
 </html>

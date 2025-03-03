@@ -1,13 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "Basketball Live Score Tracker",
+  "name": "Sports Nav",
   "version": "1.0",
-  "description": "Track live basketball scores using SportsDB API",
+  "description": "Track live sports scores",
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["storage"],
-  "host_permissions": [
-    "https://www.thesportsdb.com/"
-  ]
+  "permissions": ["storage", "alarms"],
+  "host_permissions": ["https://v2.nba.api-sports.io/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
