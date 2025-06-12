@@ -1,26 +1,12 @@
-<!-- popup.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Sports Nav</title>
-    <style>
-        body { width: 300px; padding: 15px; font-family: Arial, sans-serif; background-color: #f8f9fa; }
-        .search-section { margin-bottom: 15px; display: flex; gap: 8px; }
-        input { flex: 1; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
-        button { padding: 8px 16px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        .team-list, .match-item { padding: 12px; margin: 8px 0; background: white; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer; }
-        .match-item { cursor: default; }
-        .match-item h3 { margin: 0 0 8px 0; color: #1a73e8; }
-        .no-results { color: #666; padding: 12px; text-align: center; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Soccer Scores</title>
 </head>
 <body>
-    <div class="search-section">
-        <input type="text" id="teamInput" placeholder="Search NBA teams...">
-        <button id="searchBtn">Search</button>
-    </div>
-    <div id="teamList" class="team-list"></div>
-    <div id="matchesContainer"></div>
-    <script src="popup.js"></script>
+  <div id="root"></div>
+  <script type="module" src="./src/popup.tsx"></script>
 </body>
 </html>
